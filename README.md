@@ -74,7 +74,13 @@ The application is organized into several pages, each corresponding to the speci
 - [DotNet](https://dotnet.microsoft.com/en-us/)
 - [Visual Studio](https://visualstudio.microsoft.com) _(Recommended)_
 
-  - To run the app locally, ensure you have the necessary Xamarin.Forms development environment set up.
+3. Open terminal or Visual Studio and run:
+``` bash
+dotnet restore
+dotnet build
+dotnet run
+```
+- To run the app locally, ensure you have the necessary Xamarin.Forms development environment set up.
 
 <br>
 
