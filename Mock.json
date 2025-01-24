@@ -1,0 +1,18 @@
+[
+  {
+      "Id": 1,
+      "Titulo": "Introducción a IA",
+      "Fecha": "2023-01-01T00:00:00",
+      "Tipo": "articulo_revista",
+      "Estado": "en_revision",
+      "Autores": ["Juan Pérez", "Ana López"]
+  },
+  {
+      "Id": 2,
+      "Titulo": "Big Data en la salud",
+      "Fecha": "2022-12-15T00:00:00",
+      "Tipo": "libro_completo",
+      "Estado": "aceptado",
+      "Autores": ["Carlos Díaz"]
+  }
+]

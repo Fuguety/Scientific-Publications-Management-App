@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica.PaginaDetalle"
+             Title="Detalles de la Publicación"
+             BackgroundColor="#f4f4f9">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Seccion titulo -->
+            <Label Text="Detalles de la Publicación"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
+
+            <Label x:Name="TituloEntry"     
+                   Text="Titulo" 
+                   FontAttributes="Bold" 
+                   FontSize="30" 
+                   HorizontalOptions="FillAndExpand"
+                   TextColor="#333"
+                   BackgroundColor="#fff"
+                   Margin="0,10,0,0"/>
+
+            <!-- Seccion de los detalles -->
+            <StackLayout Padding="10" Spacing="10" BackgroundColor="White">
+            
+                
+                <Label Text="ID:" FontSize="18" TextColor="#666" FontAttributes="Bold" />
+                <Entry x:Name="IdEntry" Text="{Binding Id}" FontSize="16" TextColor="#333" IsEnabled="False" />
+
+                <Label Text="Tipo:" FontSize="18" TextColor="#666" FontAttributes="Bold" />
+                <Picker x:Name="TipoPicker"
+                        BackgroundColor="White"
+                        TextColor="#333"
+                        IsEnabled="False">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>libro_completo</x:String>
+                            <x:String>capitulo_libro</x:String>
+                            <x:String>articulo_revista</x:String>
+                            <x:String>congreso</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Estado:" FontSize="18" TextColor="#666" FontAttributes="Bold" />
+                <Picker x:Name="EstadoPicker"
+                        BackgroundColor="White"
+                        TextColor="#333"
+                        IsEnabled="False">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>en_revisión</x:String>
+                            <x:String>aceptado</x:String>
+                            <x:String>rechazado</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Autores:" FontSize="18" TextColor="#666" FontAttributes="Bold" />
+                <CollectionView x:Name="AutoresCollection" ItemsSource="{Binding Autores}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}" FontSize="16" TextColor="#333" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+                <Label Text="Fecha de Publicación:" FontSize="18" TextColor="#666" FontAttributes="Bold" />
+                <Label x:Name="FechaEntry" Text="{Binding FechaPublicacion}" FontSize="16" TextColor="#333"/>
+            
+            
+            </StackLayout>
+
+            <!-- Seccion de los botones -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+                
+                <Button x:Name="BotonEditarGuardar"
+                        Text="Editar"
+                        Clicked="ModoEditar"
+                        BackgroundColor="#f4a261"
+                        TextColor="White"
+                        WidthRequest="120"
+                        CornerRadius="10" />
+                
+
+
+                <Button Text="Eliminar"
+                        Clicked="Eliminar"
+                        BackgroundColor="#e63946"
+                        TextColor="White"
+                        WidthRequest="120"
+                        CornerRadius="10" />
+
+                <Button Text="Volver"
+                        Clicked="Volver"
+                        BackgroundColor="#457b9d"
+                        TextColor="White"
+                        WidthRequest="120"
+                        CornerRadius="10" />
+                
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" Spacing="10" Padding="10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Añadir Autor:" 
+                        FontSize="18" 
+                        TextColor="#666" 
+                        FontAttributes="Bold" 
+                        VerticalOptions="Center" />
+
+                <Entry x:Name="AutoresNuevosEntry" 
+                        Placeholder="Escriba el nombre del autor" 
+                        FontSize="16" 
+                        TextColor="#333" 
+                        BackgroundColor="#f5f5f5" 
+                        PlaceholderColor="#999" 
+                        HorizontalOptions="FillAndExpand" 
+                        VerticalOptions="Center"
+                        HeightRequest="40"
+                        Margin="5,0" />
+
+                <Button Text="Añadir" 
+                         Clicked="AñadirAutor" 
+                         BackgroundColor="Coral" 
+                         TextColor="White" 
+                         WidthRequest="100" 
+                         CornerRadius="20" 
+                         VerticalOptions="Center"
+                         FontAttributes="Bold" />
+            
+            </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

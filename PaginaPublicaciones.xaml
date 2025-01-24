@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica.PaginaPublicaciones"
+             Title="Publicaciones"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="#f4f4f9">
+
+    <StackLayout Padding="20" Spacing="15">
+        <!-- Pagina titulo -->
+        <Label Text="Listado de Publicaciones"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#333" />
+
+        <!-- MarcaDeAgua Label -->
+        <Label x:Name="MarcaDeAguaLabel"
+               Text="No hay publicaciones disponibles."
+               FontSize="18"
+               FontAttributes="Italic"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Gray"
+               IsVisible="False" />
+
+        <!-- ListaPublicaciones -->
+        <ListView x:Name="ListaPublicaciones"
+                  HasUnevenRows="True"
+                  SeparatorColor="#cccccc"
+                  BackgroundColor="White"
+                  Margin="0,10,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!-- Item Publicacion-->
+                        <Frame Padding="10"
+                               Margin="5"
+                               CornerRadius="10"
+                               BackgroundColor="White"
+                               HasShadow="True">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Titulo}"
+                                           FontAttributes="Bold"
+                                           FontSize="16"
+                                           TextColor="#333" />
+                                    <Label Text="{Binding Tipo}"
+                                           FontSize="14"
+                                           TextColor="Gray" />
+                                </StackLayout>
+                                <Button Text="Detalles"
+                                        Clicked="VerDetalles"
+                                        BackgroundColor="#457b9d"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        WidthRequest="100"
+                                        BindingContext="{Binding .}" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Entry x:Name="AutorEntry"
+                   Placeholder="Filtrar por Autor"
+                   BackgroundColor="White"
+                   TextColor="#333"
+                   PlaceholderColor="#888"
+                   HeightRequest="40" />
+
+        <Button Text="Filtrar por Autor"
+                    Clicked="FiltrarPorAutor"
+                    BackgroundColor="#e76f51"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="180"
+                    HorizontalOptions="Center" />
+
+        <Picker x:Name="TipoPicker"
+                    Title="Selecciona el Tipo"
+                    BackgroundColor="White"
+                    TextColor="#333">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>libro_completo</x:String>
+                    <x:String>capitulo_libro</x:String>
+                    <x:String>articulo_revista</x:String>
+                    <x:String>congreso</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Filtrar Tipo"
+                        Clicked="FiltrarPorTipo"
+                        BackgroundColor="#2a9d8f"
+                        TextColor="White"
+                        CornerRadius="10"
+                        WidthRequest="120" />
+
+    </StackLayout>
+</ContentPage>

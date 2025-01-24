@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lucze\\UPSA\\Mobile\\Practica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{405FF7D3-BBE8-4362-8323-73FFE64BC8FA}|Practica.csproj|c:\\users\\lucze\\upsa\\mobile\\practica\\paginadetalle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{405FF7D3-BBE8-4362-8323-73FFE64BC8FA}|Practica.csproj|solutionrelative:paginadetalle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaginaDetalle.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lucze\\UPSA\\Mobile\\Practica\\PaginaDetalle.xaml.cs",
+              "RelativeDocumentMoniker": "PaginaDetalle.xaml.cs",
+              "ToolTip": "C:\\Users\\lucze\\UPSA\\Mobile\\Practica\\PaginaDetalle.xaml.cs",
+              "RelativeToolTip": "PaginaDetalle.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwDYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T11:41:30.736Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
